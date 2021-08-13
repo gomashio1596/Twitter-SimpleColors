@@ -61,6 +61,7 @@ function main() {
 
     
     /* ボタン系 */
+    div[role="button"][data-testid="tweetButton"],
     a[data-testid="SideNav_NewTweet_Button"],
     div[data-testid="tweetButtonInline"],
     div[role="button"][data-testid="LoginForm_Login_Button"],
@@ -74,6 +75,7 @@ function main() {
     div[role="presentation"] > a[role="tab"] > div > div {
         background-color: var(--fill-color) !important;
     }
+    div[role="button"][data-testid="tweetButton"] > div,
     a[data-testid="SideNav_NewTweet_Button"] > div,
     a[data-testid="SideNav_NewTweet_Button"] > div > svg,
     div[data-testid="tweetButtonInline"] > div,
