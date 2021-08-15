@@ -33,7 +33,8 @@ function main() {
     /* アイコン系 */
     a[data-testid="AppTabBar_Notifications_Link"] > div > div > div:nth-child(2),
     a[data-testid="AppTabBar_Home_Link"] > div > div > div:nth-child(2),
-    label[data-testid="SearchBox_Search_Input_label"] > div > div[role="button"] {
+    label[data-testid="SearchBox_Search_Input_label"] > div > div[role="button"],
+    div[data-testid="SideNav_AccountSwitcher_Button"] > div > svg + div {
         background-color: var(--fill-color) !important;
         color: var(--text-color) !important;
     }
@@ -42,11 +43,13 @@ function main() {
     li[role="listitem"][data-testid="UserCell"] > div > div:nth-child(2) > div > svg,
     div[role="button"][data-testid="UserCell"] > div > div:nth-child(2) > div > div[role="button"] > div > svg,
     div[role="option"] > div > div:nth-child(2) > div:nth-child(2) > div > svg,
-    div[role="presentation"] > svg:nth-child(2) {
+    div[role="presentation"] > svg:nth-child(2),
+    a[aria-label="Twitter"][role="link"] > div > svg {
         color: var(--fill-color) !important;
     }
-    div[data-testid="primaryColumn"] > div > div:nth-child(2) > div > div[role="progressbar"],
-    div[role="listbox"][id^="typeaheadDropdown-"] > div[role="progressbar"] > div {
+    div[data-testid="primaryColumn"] > div > div:nth-child(2) > div > div[role="progressbar"][aria-valuemax="100"] > div,
+    div[role="listbox"][id^="typeaheadDropdown-"] > div[role="progressbar"] > div,
+    div[aria-labelledby="modal-header"][role="dialog"] > div > div[role="progressbar"] > div {
         background-color: var(--fill-color) !important;
     }
     div[aria-describedby="conversation-controls-details"][aria-labelledby="conversation-controls-title"] > div:nth-child(2) > div[role="menuitem"] > div:nth-child(1) {
@@ -66,7 +69,8 @@ function main() {
     div[data-testid="tweetButtonInline"],
     div[role="button"][data-testid="LoginForm_Login_Button"],
     section[aria-labelledby="detail-header"] > div:nth-child(2) > div > div[role="button"]:not([data-testid]),
-    div[aria-labelledby="modal-header"][role="dialog"] > div > div:nth-child(2) > div > div > div >  div[role="button"] {
+    div[aria-labelledby="modal-header"][role="dialog"] > div > div:nth-child(2) > div > div > div >  div[role="button"],
+    div[role="button"][data-testid="settingsDetailSave"] {
         border-color: var(--border-color) !important;
         background-color: var(--fill-color) !important;
     }
@@ -80,10 +84,11 @@ function main() {
     a[data-testid="SideNav_NewTweet_Button"] > div > svg,
     div[data-testid="tweetButtonInline"] > div,
     div[data-testid="emptyState"] > a[href="/messages/compose"] > div,
-    div[role="status"] > div[role="button"] > div > dir,
+    div[role="status"] > div[role="button"] > div > *,
     div[role="button"][data-testid="LoginForm_Login_Button"] > div,
     section[aria-labelledby="detail-header"] > div:nth-child(2) > div > div[role="button"] > div,
-    div[aria-labelledby="modal-header"][role="dialog"] > div > div:nth-child(2) > div > div > div >  div[role="button"] > div {
+    div[aria-labelledby="modal-header"][role="dialog"] > div > div:nth-child(2) > div > div > div >  div[role="button"] > div,
+    div[role="button"][data-testid="settingsDetailSave"] > div {
         color: var(--text-color) !important;
     }
     div[role="tablist"] > div > a[role="tab"] + div,
