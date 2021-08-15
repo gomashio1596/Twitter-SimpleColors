@@ -21,6 +21,10 @@ const colors = [
 
 function main() {
     let nightMode = document.cookie.match(/night_mode=(\d)/);
+    if (nightMode === null) {
+        alert("背景画像の取得に失敗しました\n背景画像の設定を一度変更してみてください");
+        return;
+    }
     let nightModeNum = parseInt(nightMode[1]);
     let style = document.getElementById("invertColor-style") ?? document.createElement("style");
     style.innerHTML = `:root {
