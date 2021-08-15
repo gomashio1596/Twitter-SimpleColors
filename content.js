@@ -62,7 +62,8 @@ function main() {
     div[aria-describedby="conversation-controls-details"][aria-labelledby="conversation-controls-title"] > div:nth-child(2) > div[role="menuitem"] > div:nth-child(3) > svg {
         color: var(--fill-color) !important;
     }
-    div[role="progressbar"] > div > svg circle {
+    :not(div[data-testid="toolBar"] > div:nth-child(2) > div) > div[role="progressbar"]:not([aria-valuenow="100"]) > div > svg circle,
+    div[data-testid="toolBar"] > div:nth-child(2) > div > div[role="progressbar"]:not([aria-valuenow="100"]) > div > svg > circle:nth-child(2) {
         stroke: var(--fill-color) !important;
     }
 
